@@ -1,0 +1,101 @@
+%\documentclass[10pt,twocolumn,twoside]{IEEEtran}
+\documentclass[a4paper, 11pt]{article}  
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{algorithm}
+% \usepackage[utf8]{inputenc}
+\usepackage[noend]{algpseudocode}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{epsfig}
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{breqn}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\newcommand{\qd}{\hfill{\qed}}
+\def\ba{\begin{array}}
+\def\ea{\end{array}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bq}{\begin{eqnarray}}
+\newcommand{\eq}{\end{eqnarray}}
+\newcommand{\bqn}{\begin{eqnarray*}}
+\newcommand{\eqn}{\end{eqnarray*}}
+\newcommand{\bee}{\begin{enumerate}}
+\newcommand{\eee}{\end{enumerate}}
+
+
+\RequirePackage{ifthen}
+\usepackage{amssymb,mathrsfs,wasysym}
+\usepackage{tikz}
+\usepackage{url}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shapes}
+
+\newcommand{\always}{\square}
+\newcommand{\eventually}{\Diamond}
+\renewcommand{\next}{\ocircle}
+\newcommand{\until}{\hspace{1mm}\mathcal{U}\hspace{1mm}}
+\newcommand{\untilc}{\mathcal{U}}
+\newcommand{\release}{\hspace{1mm}\mathcal{R}\hspace{1mm}}
+\newcommand{\true}{\relax\ifmmode \mathit{True} \else \em True \/\fi}
+\newcommand{\false}{\relax\ifmmode \mathit{False} \else \em False \/\fi}
+\newcommand{\aand}{\hspace{1mm}\wedge\hspace{1mm}}
+\newcommand{\oor}{\hspace{1mm}\vee\hspace{1mm}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\begin{document}
+
+\section{Dynamic allocation}
+
+In this paper, we propose an efficient method for managing the dynamic allocation of UAVs to fire locations that spread with time. The allocation process considers two paramaters, fire density and proximity of the UAVs to fire locations. Regions with higher fire densities correspond to areas with a higher number of fires concentrated in a region. To partition the map into regions according to their fire densities, the first step in our allocation process is to carry out the K-means $clustering$ $algorithm$ via the Matlab built-in function, $kmeans$. We set this function to use the Manhattan distance as the evaluation index of similarity in order to group fires with similar locations into the same cluster. The $kmeans$ function requires a desired number of clusters, $k$, as input. 
+
+To find the optimal $k_{opt}$, the elbow method is used. Similar work on utilizing the elbow method and other clustering techniques is shown in [X]. In the elbow method, the process iterates through the possible number of clusters, $k$, from 2 to some maximum number of clusters, $K_{max}$, and the sum of square error ($SEE$) for each $k$ is computed. Ideally, we are looking for a value of $k$ that results in clusters that have a low $SEE$. This would lead to fires with high location similarity being assigned to the same cluster. The optimal number of clusters is the value of $k$ at which the second derivative of the average of $SEE(k)$ is maximized. The idea is that the marginal drop in the average $SEE$ as $k$ increases will decrease dramatically for some value of $k$ before it reaches a plateau, hence the ``elbow criterion''. The partition algorithm is summarized in Algorithm I.
+\begin{algorithm}
+  \caption{Partition algorithm}\label{alg:kMeans}
+  \begin{algorithmic}[1]
+    \Procedure{clustering}{$K_{max},fireLocs$}
+      \State Set $k = 2$
+      \While{$k < K_{max}$} 
+        \State Compute clusters set $C = kmeans(fireLocs,k)$ 
+        \State Compute mean sum of square error with k clusters, $SEE_{avg}(k)$
+      \EndWhile
+      \State Set optimal $k$, $k_{opt} = k$ that maximizes the second derivative of $SEE_{avg}(k)$
+      \State Generate initial cluster centroid positions $C_{init}$
+      \State Compute clusters set $C = kmeans(fireLocs,k_{opt},C_{init})$
+      \State Assign $fireLocs$ to their corresponding cluster $c \in C$, 
+      \State \textbf{return} $C$, fire location assignments
+    \EndProcedure
+  \end{algorithmic}
+\end{algorithm}
+ 
+Once the map is divided into clusters, the number of UAVs that will be allocated to each cluster is defined by (),
+\begin{equation}
+N_{alloc}(c) = \ceil[\big]{\rho_{c}/\rho_{tot}\times(N_{tot} - N_{free})},
+\end{equation}
+where $\rho_{c}$ is the cluster priority calculated as the sum of intensity values of fires that belong to cluster $c$, $\rho_{tot}$ is the sum of intensity values of all fires. $N_{tot}$ is the total number of UAVs and $N_{free}$ is the number of UAVs that are not assigned to a cluster. For each cluster $c$, we assign a subset of UAVs chosen from all available UAVs. This subset of size $N_{alloc}$ is comprised of those UAVs with locations closest to $c$. Once each cluster $c$ has an assigned subset of UAVs, the next step is to decide the fire location belonging to $c$ for each UAV to set as its goal. We have two modes in which UAVs can be assigned to fires, $Sync$ mode and $NonSync$ mode. 
+
+In $Sync$  mode, for each cluster $c$, we loop through each UAV from the assigned subset to $c$ and determine the fire with the minimum cost, proportional to its distance from the UAV, and highest priority, proportional to the fire intensity, according to function $g$ as shown in (). The rest of the UAVs in the loop are assigned to the same fire as the first UAV in the loop.
+\begin{equation}
+\min_{f\in F} g(f,x) = d_{f}*\norm{x-f} + s_{f}*\norm{g-f} - n_{f}*intensity_{f},
+\end{equation}
+where $d_{f}$ is a coefficient between 0.0 and 1.0 and is used as an importance weight for the distance between UAV location $x$ and fire $f$ $\in$ $F$. $F$ represents the set of all fire locations in cluster $c$. The coefficient $n_{f}$ represents an importance weight for the fire intensity level, $intensity_{f}$. This coefficient is set as 1.0 - $d_{f}$. Finally, coefficient $s_{f}$ corresponds to the switching penalty of changing an already assigned fire to a different fire, if the assigned fire has not been reached yet. If the UAV reaches its assigned fire, then the minimization is done over all other fires.  
+
+In $NonSync$ mode, for each cluster $c$, we also loop through each UAV from the assigned subset, but only one UAV is assigned to a single fire. The fire is chosen from the set of unassigned fires for each UAV according to (). Each time a fire is assigned, it is removed from the set $F$. 
+
+
+
+
+\end{document}
+
+
