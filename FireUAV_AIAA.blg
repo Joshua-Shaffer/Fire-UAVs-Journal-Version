@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: FireUAV_AIAA.aux
+The style file: new-aiaa.bst
+Illegal, another \bibstyle command---line 140 of file FireUAV_AIAA.aux
+ : \bibstyle
+ :          {IEEEtran}
+I'm skipping whatever remains of this command
+Database file #1: sample.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in c21
+Warning--empty year in c3; set to ????
+Warning--empty journal in FARSITE
+You've used 20 entries,
+            3319 wiz_defined-function locations,
+            822 strings with 9906 characters,
+and the built_in function-call counts, 12724 in all, are:
+= -- 954
+> -- 433
+< -- 32
++ -- 182
+- -- 133
+* -- 1022
+:= -- 1738
+add.period$ -- 53
+call.type$ -- 20
+change.case$ -- 84
+chr.to.int$ -- 21
+cite$ -- 23
+duplicate$ -- 1085
+empty$ -- 1018
+format.name$ -- 195
+if$ -- 2635
+int.to.chr$ -- 1
+int.to.str$ -- 21
+missing$ -- 203
+newline$ -- 83
+num.names$ -- 61
+pop$ -- 415
+preamble$ -- 1
+purify$ -- 80
+quote$ -- 0
+skip$ -- 419
+stack$ -- 0
+substring$ -- 688
+swap$ -- 652
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 120
+warning$ -- 3
+while$ -- 72
+width$ -- 0
+write$ -- 254
+(There was 1 error message)

@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Preliminaries}{}% 2
+\BOOKMARK [1][-]{section.3}{Problem Formulation}{}% 3
+\BOOKMARK [1][-]{section.4}{Proposed Solution Method}{}% 4
+\BOOKMARK [1][-]{section.5}{Implementation}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Synthesis of Controllers in Receding Horizon framework}{section.5}% 6
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Receding Horizon Modification and Proof of Specification Validity}{subsection.5.1}% 7
+\BOOKMARK [2][-]{subsection.5.2}{Dynamic allocation}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.3}{Simulation}{section.5}% 9
+\BOOKMARK [1][-]{section.6}{Results}{}% 10
+\BOOKMARK [1][-]{section.7}{Conclusion and Future Work}{}% 11

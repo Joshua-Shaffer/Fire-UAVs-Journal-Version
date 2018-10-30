@@ -1,0 +1,139 @@
+\begin{thebibliography}{20}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Thomas et~al.(2017)Thomas, Butry, Gilbert, Webb, and Fung}]{c0}
+Thomas, D., Butry, D., Gilbert, S., Webb, D., and Fung, J., \enquote{The costs
+  and losses of wildfires: a literature survey,} Tech. rep., NIST Special
+  Publication, November 2017.
+
+\bibitem[{Plucinski and (Australia)(2006)}]{c21}
+Plucinski, M.~P., and (Australia), B.~C., \enquote{The effectiveness and
+  efficiency of aerial firefighting in Australia. Part 1,} 2006.
+\newblock At head of title: Program A: Safe prevention, preparation and
+  suppression of bushires.
+
+\bibitem[{Werner(2015)}]{c1}
+Werner, D., \enquote{Fire Drones,} \emph{Aerospace America}, 2015, p. 2831.
+
+\bibitem[{Qin et~al.(2016)Qin, Cui, Li, Bi, Lan, Shan, Liu, Wang, Lin, Zhang,
+  and Chen}]{c2}
+Qin, H., Cui, J.~Q., Li, J., Bi, Y., Lan, M., Shan, M., Liu, W., Wang, K., Lin,
+  F., Zhang, Y.~F., and Chen, B.~M., \enquote{Design and implementation of an
+  unmanned aerial vehicle for autonomous firefighting missions,} \emph{2016
+  12th IEEE International Conference on Control and Automation (ICCA)}, 2016,
+  pp. 62--67.
+\newblock \doi{10.1109/ICCA.2016.7505253}.
+
+\bibitem[{Wongpiromsarn et~al.(2012)Wongpiromsarn, Topcu, and Murray}]{c10}
+Wongpiromsarn, T., Topcu, U., and Murray, R.~M., \enquote{Receding Horizon
+  Temporal Logic Planning,} \emph{IEEE Transactions on Automatic Control},
+  Vol.~57, No.~11, 2012, pp. 2817--2830.
+\newblock \doi{10.1109/TAC.2012.2195811}.
+
+\bibitem[{Johnson et~al.()Johnson, Havlak, Kress-Gazit, and Campbell}]{c3}
+Johnson, B., Havlak, F., Kress-Gazit, H., and Campbell, M.,
+  \enquote{Experimental Evaluation and Formal Analysis of High-Level Tasks with
+  Dynamic Obstacle Anticipation on a Full-Sized Autonomous Vehicle,}
+  \emph{Journal of Field Robotics}, Vol.~34, No.~5, ????, pp. 897--911.
+\newblock \doi{10.1002/rob.21695},
+  \urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/rob.21695}.
+
+\bibitem[{Wong and Kress-Gazit(2016)}]{c4}
+Wong, K.~W., and Kress-Gazit, H., \enquote{Need-based coordination for
+  decentralized high-level robot control,} \emph{2016 IEEE/RSJ International
+  Conference on Intelligent Robots and Systems (IROS)}, 2016, pp. 2209--2216.
+\newblock \doi{10.1109/IROS.2016.7759346}.
+
+\bibitem[{Alonso-Mora et~al.(2018)Alonso-Mora, DeCastro, Raman, Rus, and
+  Kress-Gazit}]{c5}
+Alonso-Mora, J., DeCastro, J.~A., Raman, V., Rus, D., and Kress-Gazit, H.,
+  \enquote{Reactive mission and motion planning with deadlock resolution
+  avoiding dynamic obstacles,} \emph{Autonomous Robots}, Vol.~42, No.~4, 2018,
+  pp. 801--824.
+\newblock \doi{10.1007/s10514-017-9665-6},
+  \urlprefix\url{https://doi.org/10.1007/s10514-017-9665-6}.
+
+\bibitem[{Liang et~al.(2014)Liang, Yang, and Deng}]{c14}
+Liang, Z., Yang, X., and Deng, Y., \enquote{A partitioning-based task
+  allocation strategy for Police Multi-Agents,} \emph{The 26th Chinese Control
+  and Decision Conference (2014 CCDC)}, 2014, pp. 2124--2128.
+\newblock \doi{10.1109/CCDC.2014.6852518}.
+
+\bibitem[{Mirzapour and Aghdasi(2017)}]{c15}
+Mirzapour, B., and Aghdasi, H.~S., \enquote{Modified multi-objective hybrid DE
+  and PSO algorithms for resource allocation in forest fires,} \emph{2017 7th
+  International Conference on Computer and Knowledge Engineering (ICCKE)},
+  2017, pp. 187--192.
+\newblock \doi{10.1109/ICCKE.2017.8167950}.
+
+\bibitem[{Fiorucci et~al.(2004)Fiorucci, Gaetani, Minciardi, Sacil, and
+  Trasforini}]{16}
+Fiorucci, P., Gaetani, F., Minciardi, R., Sacil, R., and Trasforini, E.,
+  \enquote{Dynamic resource allocation for forest fire risk management,}
+  \emph{Proceedings. 15th International Workshop on Database and Expert Systems
+  Applications, 2004.}, 2004, pp. 603--607.
+\newblock \doi{10.1109/DEXA.2004.1333541}.
+
+\bibitem[{Tumova and Dimarogonas(2016)}]{c6}
+Tumova, J., and Dimarogonas, D.~V., \enquote{Multi-agent planning under local
+  LTL specifications and event-based synchronization,} \emph{Automatica},
+  Vol.~70, 2016, pp. 239 -- 248.
+\newblock \doi{https://doi.org/10.1016/j.automatica.2016.04.006},
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0005109816301285}.
+
+\bibitem[{Piterman et~al.(2006)Piterman, Pnueli, and Sa'ar}]{c7}
+Piterman, N., Pnueli, A., and Sa'ar, Y., \enquote{Synthesis of Reactive(1)
+  Designs,} \emph{Verification, Model Checking, and Abstract Interpretation},
+  edited by E.~A. Emerson and K.~S. Namjoshi, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 2006, pp. 364--380.
+
+\bibitem[{Ulusoy and Belta(2014)}]{c8}
+Ulusoy, A., and Belta, C., \enquote{Receding horizon temporal logic control in
+  dynamic environments,} \emph{The International Journal of Robotics Research},
+  Vol.~33, No.~12, 2014, pp. 1593--1607.
+\newblock \doi{10.1177/0278364914537008},
+  \urlprefix\url{https://doi.org/10.1177/0278364914537008}.
+
+\bibitem[{{Ding} et~al.(2012){Ding}, {Lazar}, and {Belta}}]{c9}
+{Ding}, X., {Lazar}, M., and {Belta}, C., \enquote{{Receding Horizon Temporal
+  Logic Control for Finite Deterministic Systems},} \emph{ArXiv e-prints},
+  2012.
+
+\bibitem[{Yang et~al.(2014)Yang, Qi, Xiao, and Yong}]{c18}
+Yang, L., Qi, J., Xiao, J., and Yong, X., \enquote{A literature review of UAV
+  3D path planning,} \emph{Proceeding of the 11th World Congress on Intelligent
+  Control and Automation}, 2014, pp. 2376--2381.
+\newblock \doi{10.1109/WCICA.2014.7053093}.
+
+\bibitem[{A.~Finney(1998)}]{FARSITE}
+A.~Finney, M., \enquote{FARSITE: Fire Area Simulator—model development and
+  evaluation,} 1998.
+
+\bibitem[{Andrews(2018)}]{rosthermel}
+Andrews, P.~L., \enquote{The Rothermel Surface Fire Spread Model and Associated
+  Developments: A Comprehensive Explanation,} Tech. rep., U.S. Department of
+  Agriculture, Forest Service, Rocky Mountain Research Station, Mar. 2018.
+
+\bibitem[{CSIRO(2000)}]{australiafirereport}
+CSIRO, \enquote{Assessment of the effectiveness and environmental risk of the
+  use of retardants to assist in wildfire control in Victoria,} Tech. rep.,
+  Australian Department of Natural Resources and Environment, Feb. 2000.
+
+\bibitem[{Wongpiromsarn et~al.(2011)Wongpiromsarn, Topcu, Ozay, Xu, and
+  Murray}]{c12}
+Wongpiromsarn, T., Topcu, U., Ozay, N., Xu, H., and Murray, R.~M.,
+  \enquote{TuLiP: A Software Toolbox for Receding Horizon Temporal Logic
+  Planning,} \emph{Proceedings of the 14th International Conference on Hybrid
+  Systems: Computation and Control}, ACM, New York, NY, USA, 2011, pp.
+  313--314.
+\newblock \doi{10.1145/1967701.1967747},
+  \urlprefix\url{http://doi.acm.org/10.1145/1967701.1967747}.
+
+\end{thebibliography}
